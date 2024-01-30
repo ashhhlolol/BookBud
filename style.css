@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,400;1,600&display=swap');
+
+:root {
+    --orange: #2c5ca0;
+    --dark-color: #084178;
+    --black: #444;
+    --light-color: #666;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --border-hover: 0.1rem solid var(--black);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-X: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.section {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #090909;
+    /* Set your preferred text color */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #151515;
+}
+
+
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+}
+
+.home .row .content h3 {
+    color: var(--black);
+    font-size: 4.5rem;
+}
+
+.home .row .content p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.home .row .books-list {
+    flex: 1 1 42rem;
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
+.home .row .books-list a img {
+    height: 25rem;
+}
+
+.home .row .books-list a:hover img {
+    transform: scale(0.9);
+}
+
+.home .row .books-list .stand {
+    width: 100%;
+    margin-top: -2rem;
+}
+
+
+.social-icons {
+    display: flex;
+    color: #06315f;
+    
+}
+
+.social-icons .contact-icon i {
+    padding: 10px;
+    font-size: 20px; /* Set the size of the icons */
+}
+
+
+.footer-copyright {
+    text-align: right;
+}
+
+/* Additional styles for centering SVG in the footer */
+#footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Adjustments for the SVG container */
+.svg-container {
+    width: 100%;
+    /* Make sure it takes the full width */
+    max-width: 300px;
+    /* Adjust the max-width as needed */
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+#svg-object {
+    width: 100%;
+    height: auto;
+}
+
+
+#table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#table th,
+#table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #c36ba5;
+}
+
+#table th {
+    background-color: #df8cdb;
+}
+
+#table tbody tr:hover {
+    background-color: #afacac;
+}
+
+
+
+
+.svg-container {
+    position: relative;
+    width: 50%;
+    max-width: 50%;
+}
+
+.poly-marker {
+    width: 15px;
+    height: 15px;
+    background-color: #0fcdd7;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.card {
+    border: none;
+    max-width: auto;
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* CSS for the search bar */
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #searchInput {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  #searchInput:focus {
+    border-color: #007bff; /* Change the border color when the input is focused */
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+
+  /* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*---- media query ----------*/
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header .header-1 {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    html {
+        scroll-padding-top: 0;
+    }
+
+    body {
+        padding-bottom: 6rem;
+    }
+
+
+    .header .header-1 .search-form.active {
+        top: 115%;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    .home .row .content h3 {
+        color: var(--black);
+        font-size: 3.5rem;
+    }
+
+    .home .row .content {
+        text-align: center;
+    }
+
+    .newsletter {
+        background-position: right;
+    }
+
+    .newsletter form {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media(max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+}

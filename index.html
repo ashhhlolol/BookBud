@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sj0XlaBElOwTvLX5k1DRqxRPdKbTuLWL1zpGWdM4slyqSp3Uzvsr8eN3ow5Dq63e43L2Kfbo0Y3V39RY2a2lOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <a href="#firstPage" class="logo">
+                <img src="images/logo.png" class="logo" alt=""></i>bookbud
+            </a>
+            <nav class="nav-links">
+                <a href="#firstPage">home</a>
+                <a href="#secondPage">books</a>
+                <a href="#thirdPage">inventory</a>
+                <a href="#finalPage">stats</a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="fullpage">
+
+        <div class="section" data-anchor="home">
+            <section class="home" id="home">
+                <div class="row">
+                    <div class="content">
+                        <h3>Welcome to BookBud</h3>
+                        <p>Beyond Books, Building Dreams: Unleash Your Potential Here.</p>
+                    </div>
+
+                    <div class="swiper books-list">
+
+                        <div class="swiper-wrapper">
+                            <a href="#" class="swiper-slide"><img src="images/home-book-1.png" alt=""></a>
+                            <a href="#" class="swiper-slide"><img src="images/home-book-2.png" alt=""></a>
+                            <a href="#" class="swiper-slide"><img src="images/home-book-4.png" alt=""></a>
+
+                        </div>
+                        <img src="images/stand.png" class="stand" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="section" data-anchor="books">
+            <div id="cardCarousel" class="carousel slide card-container" data-bs-ride="carousel">
+                <div class="book-container">
+                    <h3 class="text-center">Click the Books Covers for their description !</h3>
+                    <div id="search" class="search-bar">
+                        <input type="text" placeholder="Search for books" id="searchInput">
+                    </div>
+
+                    <div class="carousel-inner" id="searchResults">
+                        <div class="carousel-item active">
+                            <div class="container mb-3">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                                    <!-- Card 1 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item1" data-author="Elena Hart">
+                                            <a href="#"
+                                                onclick="showBookDescription('Ideal For Interior by Elena Hart', 'Unlock the secrets to creating your dream home with Ideal For Interior, a comprehensive guide to mastering the art of harmonious interior design. Dive into the world of aesthetic balance, functionality, and personal expression as you discover expert tips and techniques for transforming any space into a sanctuary of style and comfort. From selecting the perfect color palette to arranging furniture for optimal flow, this book offers practical advice and creative inspiration for every room in your home. Whether you are a design novice or a seasoned decorator, Ideal For Interior empowers you to cultivate a space that reflects your unique personality and enhances your daily life. Say goodbye to design dilemmas and hello to your ideal interior oasis!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-1.png" class="card-img-top" alt="book1">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Ideal For Interior</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Elena Hart
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 2 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item2" data-author="Nathan Brooks">
+                                            <a href="#"
+                                                onclick="showBookDescription('Simple & Minimalistic by Nathan Brooks', 'Enter a world of serene simplicity and uncluttered living with Simple & Minimalistic, a transformative guide to embracing the beauty of minimalism in every aspect of your life. From decluttering your physical space to streamlining your digital presence, this book offers practical strategies and mindful practices to help you achieve a sense of calm and clarity amidst the chaos of modern living. Explore the art of intentional living as you learn to prioritize what truly matters, letting go of excess and embracing the essence of simplicity. Filled with inspiring anecdotes, minimalist lifestyle hacks, and reflective exercises, Simple & Minimalistic invites you to embark on a journey of self-discovery and liberation, one minimalist step at a time. Say goodbye to overwhelm and hello to a life of peace, purpose, and profound simplicity!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-2.png" class="card-img-top" alt="book2">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Simple & Minimalistic</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Nathan Brooks
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Card 3 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item3" data-author="Sophia Bennett">
+                                            <a href="#"
+                                                onclick="showBookDescription('Muted color Poster by Sophia Bennett', 'Step into the enchanting world of understated beauty with Muted Color Poster, a captivating exploration of the nuanced allure of muted tones in visual design. Delving into the psychology and aesthetics behind muted colors, this book unveils the secrets to creating stunning posters that speak volumes with quiet sophistication. From soft pastels to earthy neutrals, discover how to harness the power of subdued hues to evoke emotion, convey messages, and captivate audiences. Packed with inspirational examples, practical tips, and expert insights, Muted Color Poster is a must-have guide for designers, artists, and anyone seeking to master the art of visual elegance. Prepare to transform your creations into timeless works of understated brilliance!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-3.png" class="card-img-top" alt="book3">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Muted color Poster</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Sophia Bennett
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 4 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item4" data-author="margaret hillert">
+                                            <a href="#"
+                                                onclick="showBookDescription('Pouring Dreams by Margaret Hillert', 'Indulge in the intoxicating aroma of freshly brewed dreams with Pouring Dreams, a captivating exploration of the artisanal coffee culture sweeping the globe. Delve into the rich history, passionate craftsmanship, and tantalizing flavors that define the worlds most sought-after coffee beans. From the misty highlands of Ethiopia to the bustling streets of Portland, this book takes you on a sensory adventure through the diverse landscapes where coffee dreams are born. With expert tips on brewing techniques, flavor profiles, and the art of latte artistry, Pouring Dreams is your passport to a world where every cup tells a story and every sip ignites the imagination. Prepare to awaken your senses and embark on a caffeinated journey like no other!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-4.png" class="card-img-top" alt="book4">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pouring Dreams</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Margaret Hillert
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container mb-3">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                                    <!-- Card 5 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item5" data-author="Benjamin Archer">
+                                            <a href="#"
+                                                onclick="showBookDescription('Customize Your Autumn Clothes by Benjamin Archer', 'Embark on a journey through the vibrant world of autumn fashion with this groundbreaking guidebook! Packed with ingenious tips and tricks, Customize Your Autumn Clothes unveils the secrets behind revamping your wardrobe for the cozy season ahead. From DIY embellishments to ingenious layering techniques, this book offers a treasure trove of inspiration for fashionistas seeking to elevate their autumn style game. Whether you are a seasoned trendsetter or a fashion novice, prepare to unleash your creativity and embrace the magic of autumnal elegance like never before!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-5.png" class="card-img-top" alt="book5">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Customize Your Autumn Clothes</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Benjamin Archer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 6 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item6" data-author="r.j palacio">
+                                            <a href="#"
+                                                onclick="showBookDescription('Designed for Work by R.J Palacio', 'Unleash your full potential in the workplace with Designed for Work, a groundbreaking manual for crafting the ultimate productive workspace tailored to your needs. From optimizing desk layouts to harnessing the power of ergonomic furniture, this book offers a wealth of strategies and insights to transform your work environment into a hub of efficiency and inspiration. Dive into the psychology of workplace design as you learn how color, lighting, and layout can impact productivity and creativity. With practical tips on decluttering, organizing, and personalizing your space, Designed for Work empowers you to create a workspace that not only enhances your performance but also nurtures your well-being. Whether you work from home or in a bustling office, this book is your blueprint for designing a workspace that works as hard as you do. Say hello to your most productive self!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-6.png" class="card-img-top" alt="book6">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Designed for Work</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> R.J Palacio
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 7 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item7" data-author="john boyne">
+                                            <a href="#"
+                                                onclick="showBookDescription('Plant Trees for the Future by John Boyne', 'Embark on a green journey towards a brighter tomorrow with Plant Trees for the Future, an inspiring guidebook that empowers individuals and communities to take action in combating climate change and preserving our planets precious resources. Discover practical tips, innovative strategies, and actionable steps for incorporating sustainable practices into your daily life, from reducing waste to conserving energy and advocating for environmental justice. With engaging narratives, insightful case studies, and expert advice from leading eco-activists, this book equips you with the knowledge and tools needed to make a meaningful impact in the fight against global warming. Whether you are a seasoned environmentalist or a newcomer to the green movement, Plant Trees for the Future is your go-to resource for creating a more sustainable, equitable, and resilient world for generations to come. Join the movement, plant the seeds of change, and lets grow a greener future together!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-7.png" class="card-img-top" alt="book7">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Plant Trees for the Future</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> John Boyne
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 8 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item8" data-author="rueda claudia">
+                                            <a href="#"
+                                                onclick="showBookDescription('Modern Abstract by Rueda Claudia', 'Immerse yourself in the dynamic world of abstract art with Modern Abstract, a captivating journey through the avant-garde movements shaping todays creative landscape. From bold geometric forms to expressive gestural strokes, this book celebrates the diversity and innovation of abstract expressionism in the 21st century. Delve into the minds of visionary artists as they push the boundaries of traditional art conventions, challenging perceptions and igniting dialogue with their thought-provoking creations. With stunning visuals, insightful commentary, and behind-the-scenes glimpses into the creative process, Modern Abstract offers a comprehensive overview of the artists, techniques, and trends driving the contemporary abstract art scene. Whether you are a seasoned art aficionado or a curious newcomer, prepare to be inspired and intrigued by the boundless possibilities of modern abstraction.')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-8.png" class="card-img-top" alt="book8">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Modern Abstract</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Rueda Claudia
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container mb-3">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+                                    <!-- Card 9 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item9" data-author="dustin thao">
+                                            <a href="#"
+                                                onclick="showBookDescription('Bird Park by Dustin Thao', 'Join us on a whimsical journey through the enchanting world of Bird Park, where feathered friends and fantastical creatures come to life in a storybook setting unlike any other. Follow the curious protagonist as they explore the lush landscapes and hidden wonders of this magical avian sanctuary, encountering colorful birds of all shapes and sizes along the way. From the majestic peacock to the playful parrot, each feathered resident has a tale to tell and a lesson to impart. With charming illustrations, lyrical prose, and heartwarming encounters, Bird Park is a delightful escapade for readers of all ages. So spread your wings, embrace the spirit of adventure, and let your imagination take flight in the enchanting world of Bird Park!')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-9.png" class="card-img-top" alt="book9">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Bird Park</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Dustin Thao
+                                                </div>
+                                                <button id="card5" class="border-0 float-end"
+                                                    onclick="bookmarkFunction()" data-bs-toggle="offcanvas"
+                                                    data-bs-target="#offcanvasBottom">
+                                                    <i class="bi bi-bookmark" title="Add to bookmarks" id="mark5"
+                                                        data-bs-toggle="tooltip"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 10 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item10" data-author="John Myers">
+                                            <a href="#"
+                                                onclick="showBookDescription('Memories of the Sword by John Myers', 'Transport yourself to a bygone era of samurai warriors and feudal Japan with Memories of the Sword, an epic tale of honor, loyalty, and the quest for redemption. Set against the backdrop of turbulent political intrigue and martial prowess, this sweeping saga follows the journey of a master swordsman haunted by his past. As he grapples with the weight of his actions and the ghosts of his ancestors, he embarks on a perilous quest to uncover the truth and reclaim his legacy. From breathtaking battles to poignant moments of introspection, Memories of the Sword immerses readers in a rich tapestry of historical detail and emotional depth. With vibrant characters, intricate plot twists, and evocative prose, this book captures the essence of samurai tradition while delivering a riveting tale of courage and sacrifice. Prepare to be transported to a world where honor is the ultimate currency and the blade of a sword holds the power to shape destinies.')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-10.png" class="card-img-top" alt="book10">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Memories of the Sword</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> John Myers
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 11 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item11" data-author="richard h. thaler">
+                                            <a href="#"
+                                                onclick="showBookDescription('Classic Blue by Richard H. Thaler', 'Indulge in the soothing embrace of Classic Blue, a stunning homage to the enduring allure of this timeless hue. From the regal depths of midnight to the serene whispers of twilight, explore the myriad shades and moods of blue as they dance across the pages of this exquisite volume. Journey through history and culture as you uncover the significance of blue in art, fashion, and design, from ancient civilizations to modern masterpieces. With evocative imagery, insightful commentary, and inspiring anecdotes, Classic Blue invites readers to immerse themselves in the calming embrace of this universally beloved color. Whether you are a connoisseur of color or simply seeking solace in the beauty of simplicity, this book is sure to captivate your senses and soothe your soul. Prepare to be swept away on a journey of elegance and serenity as you bask in the timeless charm of Classic Blue.')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/book-11.png" class="card-img-top" alt="book11">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Classic Blue</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Richard H. Thaler
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card 12 -->
+                                    <div class="col">
+                                        <div class="card h-100 m-3" id="item12" data-author="atul gawande">
+                                            <a href="#"
+                                                onclick="showBookDescription('Diana & Jack by Atul Gawande', 'Step into the glitzy world of high society and scandal with Diana & Jack, a captivating tale of love, betrayal, and intrigue set against the backdrop of the glamorous 1960s. Follow the captivating story of Diana, a young socialite torn between duty and desire, and Jack, a dashing playboy with a mysterious past. As their forbidden romance unfolds amidst the glittering parties and whispered secrets of New York Citys elite, they must navigate treacherous waters of passion and politics to keep their love alive. But when dark forces conspire to tear them apart, Diana and Jack must make impossible choices that will test the limits of their love and reshape their destinies forever. With gripping suspense, sizzling romance, and unexpected twists at every turn, Diana & Jack is a spellbinding saga that will leave readers breathless until the very last page. Prepare to be swept away on a whirlwind journey of love and betrayal in this mesmerizing tale of star-crossed lovers.')"
+                                                data-bs-toggle="modal" data-bs-target="#bookDescriptionModal">
+                                                <img src="images/home-book-1.png" class="card-img-top" alt="book12">
+                                            </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Diana & Jack</h5>
+                                                <a href="#" class="btn btn-primary mt-2">Reserve</a>
+                                            </div>
+                                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="fa-solid fa-pen-nib"></i> Atul Gawande
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="contact">
+            <div id="inventory">
+                <h3 class="text-center">Books Inventory</h3>
+                <table id="table" class="display" width="80%"></table>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="contact">
+            <div id="stats">
+                <h3 class="text-center">Genre Statistics</h3>
+                <div>
+                    <canvas id="myChart" width="1500" height="500"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="footer">
+            <footer>
+                <div id="footer-section">
+                    <h2>Connect With Us</h2>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/yourFacebookProfile" target="_blank" class="contact-icon"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/yourTwitterHandle" target="_blank" class="contact-icon"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/yourLinkedInProfile" target="_blank"
+                            class="contact-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="location">
+                        <h3>Our Location</h3>
+                        <p>Singapore</p>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2024 BookBud. All rights reserved.</p>
+                    </div>
+                    <div id="map">
+                    </div>
+                    <div class="svg-container">
+                        <object type="image/svg+xml" data="singapore.svg" id="svg-object"></object>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal for book description -->
+    <div class="modal fade" id="bookDescriptionModal" tabindex="-1" aria-labelledby="bookDescriptionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookDescriptionModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.4/dist/tippy-bundle.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
